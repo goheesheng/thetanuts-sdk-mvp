@@ -2,6 +2,12 @@
 
 A minimal frontend for interacting with the Thetanuts Finance options trading protocol on Base mainnet.
 
+## Screenshots
+
+![MVP Screenshot 1](./public/mvp1.png)
+
+![MVP Screenshot 2](./public/mvp2.png)
+
 ## Features
 
 - **Wallet Connection** - Connect MetaMask to Base mainnet
