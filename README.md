@@ -4,9 +4,13 @@ A minimal frontend for interacting with the Thetanuts Finance options trading pr
 
 ## Screenshots
 
+### Orderbook Trading
 ![MVP Screenshot 1](./public/mvp1.png)
 
 ![MVP Screenshot 2](./public/mvp2.png)
+
+### RFQ Trading
+![RFQ Screenshot](./public/mvp3.png)
 
 ## Features
 
@@ -14,6 +18,11 @@ A minimal frontend for interacting with the Thetanuts Finance options trading pr
 - **View Orders** - Browse available options orders (CALL/PUT)
 - **Fill Orders** - Execute trades with USDC approval flow
 - **Token Balances** - View USDC and WETH balances
+- **RFQ Trading** - Create custom Request for Quote orders
+  - Support for vanilla, spread, butterfly, condor, and iron condor structures
+  - ETH and BTC underlying assets
+  - Long/Short positions with collateral estimation
+  - Configurable expiry dates and offer deadlines
 
 ## Tech Stack
 
@@ -68,6 +77,9 @@ Key methods used:
 - `client.erc20.getBalance()` - Check token balances
 - `client.erc20.ensureAllowance()` - Approve tokens
 - `client.optionBook.fillOrder()` - Execute order fill
+- `client.optionFactory.buildRFQRequest()` - Build RFQ parameters
+- `client.optionFactory.requestForQuotation()` - Create RFQ
+- `client.utils.calculateCollateral()` - Estimate collateral requirements
 
 ## License
 
