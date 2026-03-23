@@ -1,0 +1,22 @@
+{
+  "filePath": ".spec-workflow/specs/rfq-form-enhancements/requirements.md",
+  "currentVersion": 2,
+  "snapshots": [
+    {
+      "version": 1,
+      "filename": "snapshot-001.json",
+      "timestamp": "2026-03-23T08:48:47.117Z",
+      "trigger": "initial",
+      "approvalId": "approval_1774255727116_ppadufaxh",
+      "approvalTitle": "RFQ Form Enhancements - Requirements"
+    },
+    {
+      "version": 2,
+      "filename": "snapshot-002.json",
+      "timestamp": "2026-03-23T08:49:04.752Z",
+      "trigger": "approved",
+      "approvalId": "approval_1774255727116_ppadufaxh",
+      "approvalTitle": "RFQ Form Enhancements - Requirements"
+    }
+  ]
+}

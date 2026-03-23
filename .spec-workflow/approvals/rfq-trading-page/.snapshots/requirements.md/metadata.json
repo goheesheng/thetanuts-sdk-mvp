@@ -1,0 +1,22 @@
+{
+  "filePath": ".spec-workflow/specs/rfq-trading-page/requirements.md",
+  "currentVersion": 2,
+  "snapshots": [
+    {
+      "version": 1,
+      "filename": "snapshot-001.json",
+      "timestamp": "2026-03-23T08:13:06.002Z",
+      "trigger": "initial",
+      "approvalId": "approval_1774253586000_gwag891uu",
+      "approvalTitle": "RFQ Trading Page - Requirements Document"
+    },
+    {
+      "version": 2,
+      "filename": "snapshot-002.json",
+      "timestamp": "2026-03-23T08:13:27.386Z",
+      "trigger": "approved",
+      "approvalId": "approval_1774253586000_gwag891uu",
+      "approvalTitle": "RFQ Trading Page - Requirements Document"
+    }
+  ]
+}

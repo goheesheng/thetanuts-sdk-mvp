@@ -1,0 +1,22 @@
+{
+  "filePath": ".spec-workflow/specs/rfq-form-enhancements/design.md",
+  "currentVersion": 2,
+  "snapshots": [
+    {
+      "version": 1,
+      "filename": "snapshot-001.json",
+      "timestamp": "2026-03-23T08:50:08.059Z",
+      "trigger": "initial",
+      "approvalId": "approval_1774255808056_7geh361au",
+      "approvalTitle": "RFQ Form Enhancements - Design"
+    },
+    {
+      "version": 2,
+      "filename": "snapshot-002.json",
+      "timestamp": "2026-03-23T08:50:11.283Z",
+      "trigger": "approved",
+      "approvalId": "approval_1774255808056_7geh361au",
+      "approvalTitle": "RFQ Form Enhancements - Design"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "filePath": ".spec-workflow/specs/rfq-trading-page/tasks.md",
+  "currentVersion": 2,
+  "snapshots": [
+    {
+      "version": 1,
+      "filename": "snapshot-001.json",
+      "timestamp": "2026-03-23T08:19:14.396Z",
+      "trigger": "initial",
+      "approvalId": "approval_1774253954394_7lzz8nbk3",
+      "approvalTitle": "RFQ Trading Page - Tasks Document"
+    },
+    {
+      "version": 2,
+      "filename": "snapshot-002.json",
+      "timestamp": "2026-03-23T08:19:24.674Z",
+      "trigger": "approved",
+      "approvalId": "approval_1774253954394_7lzz8nbk3",
+      "approvalTitle": "RFQ Trading Page - Tasks Document"
+    }
+  ]
+}

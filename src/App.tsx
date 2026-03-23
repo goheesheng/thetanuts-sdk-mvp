@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import { useWallet } from './hooks/useWallet';
 import { useThetanutsClient } from './hooks/useThetanutsClient';
 import { WalletConnect } from './components/WalletConnect';
 import { OrdersTable } from './components/OrdersTable';
 import { TokenBalances } from './components/TokenBalances';
+import { TabNavigation } from './components/TabNavigation';
+import { RFQPage } from './components/RFQPage';
+import { MainTab } from './types/rfq';
 
 function App() {
   const {
@@ -19,16 +23,23 @@ function App() {
 
   const client = useThetanutsClient({ signer, isCorrectNetwork });
 
+  // Tab state for switching between Orderbook and RFQ
+  const [activeTab, setActiveTab] = useState<MainTab>('orderbook');
+
   return (
     <div className="min-h-screen bg-gray-900">
       {/* Header */}
       <header className="border-b border-gray-800">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold">
-              T
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold">
+                T
+              </div>
+              <h1 className="text-xl font-bold">Thetanuts Finance</h1>
             </div>
-            <h1 className="text-xl font-bold">Thetanuts Finance</h1>
+            {/* Tab Navigation */}
+            <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
           </div>
           <WalletConnect
             address={address}
@@ -46,13 +57,22 @@ function App() {
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 py-8">
         <div className="grid gap-6 lg:grid-cols-3">
-          {/* Orders Table - Takes 2 columns on large screens */}
+          {/* Main Content Area - Takes 2 columns on large screens */}
           <div className="lg:col-span-2">
-            <OrdersTable
-              client={client}
-              isConnected={isConnected}
-              isCorrectNetwork={isCorrectNetwork}
-            />
+            {activeTab === 'orderbook' ? (
+              <OrdersTable
+                client={client}
+                isConnected={isConnected}
+                isCorrectNetwork={isCorrectNetwork}
+              />
+            ) : (
+              <RFQPage
+                client={client}
+                address={address}
+                isConnected={isConnected}
+                isCorrectNetwork={isCorrectNetwork}
+              />
+            )}
           </div>
 
           {/* Sidebar */}

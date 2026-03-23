@@ -1,0 +1,22 @@
+{
+  "filePath": ".spec-workflow/specs/rfq-form-enhancements/tasks.md",
+  "currentVersion": 2,
+  "snapshots": [
+    {
+      "version": 1,
+      "filename": "snapshot-001.json",
+      "timestamp": "2026-03-23T08:52:00.080Z",
+      "trigger": "initial",
+      "approvalId": "approval_1774255920078_yyawikawq",
+      "approvalTitle": "RFQ Form Enhancements - Tasks"
+    },
+    {
+      "version": 2,
+      "filename": "snapshot-002.json",
+      "timestamp": "2026-03-23T08:52:18.054Z",
+      "trigger": "approved",
+      "approvalId": "approval_1774255920078_yyawikawq",
+      "approvalTitle": "RFQ Form Enhancements - Tasks"
+    }
+  ]
+}

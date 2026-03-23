@@ -1,0 +1,22 @@
+{
+  "filePath": ".spec-workflow/specs/rfq-trading-page/design.md",
+  "currentVersion": 2,
+  "snapshots": [
+    {
+      "version": 1,
+      "filename": "snapshot-001.json",
+      "timestamp": "2026-03-23T08:15:29.949Z",
+      "trigger": "initial",
+      "approvalId": "approval_1774253729947_vzh3ivfx5",
+      "approvalTitle": "RFQ Trading Page - Design Document"
+    },
+    {
+      "version": 2,
+      "filename": "snapshot-002.json",
+      "timestamp": "2026-03-23T08:16:49.246Z",
+      "trigger": "approved",
+      "approvalId": "approval_1774253729947_vzh3ivfx5",
+      "approvalTitle": "RFQ Trading Page - Design Document"
+    }
+  ]
+}
