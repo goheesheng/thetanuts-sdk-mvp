@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThetanutsClient } from '@thetanuts-finance/thetanuts-client';
+import { formatStrike, formatExpiry, formatPrice, getOptionTypeLabel } from '../utils/formatters';
 
 interface OrdersTableProps {
   client: ThetanutsClient;
@@ -41,30 +42,6 @@ export function OrdersTable({ client, isConnected, isCorrectNetwork, onTradeComp
     }
   }
 
-  const formatStrike = (strike: bigint) => {
-    return `$${(Number(strike) / 1e8).toLocaleString()}`;
-  };
-
-  const formatExpiry = (expiry: bigint) => {
-    const date = new Date(Number(expiry) * 1000);
-    return date.toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-    });
-  };
-
-  const formatPrice = (price: bigint) => {
-    return `$${(Number(price) / 1e8).toFixed(4)}`;
-  };
-
-  const getOptionTypeLabel = (optionType?: number) => {
-    if (optionType === 0) return 'CALL';
-    if (optionType === 1) return 'PUT';
-    return 'UNKNOWN';
-  };
 
   const getAssetFromOrder = (orderData: OrderWithSignature): string => {
     // Determine asset from rawApiData.priceFeed or isCall
@@ -200,8 +177,8 @@ export function OrdersTable({ client, isConnected, isCorrectNetwork, onTradeComp
               const isExpanded = expandedOrder === orderKey;
 
               return (
-                <>
-                  <tr key={orderKey} className="border-b border-gray-700/50 hover:bg-gray-700/30">
+                <React.Fragment key={orderKey}>
+                  <tr className="border-b border-gray-700/50 hover:bg-gray-700/30">
                     <td className="py-3 pr-4">
                       <span className={`px-2 py-1 rounded text-xs font-medium ${
                         optionTypeLabel === 'CALL'
@@ -235,7 +212,7 @@ export function OrdersTable({ client, isConnected, isCorrectNetwork, onTradeComp
                     </td>
                   </tr>
                   {isExpanded && (
-                    <tr key={`${orderKey}-form`} className="bg-gray-750">
+                    <tr className="bg-gray-750">
                       <td colSpan={7} className="p-4 bg-gray-700/30">
                         <div className="max-w-md">
                           <h3 className="text-sm font-semibold mb-3">Fill Order</h3>
@@ -328,7 +305,7 @@ export function OrdersTable({ client, isConnected, isCorrectNetwork, onTradeComp
                       </td>
                     </tr>
                   )}
-                </>
+                </React.Fragment>
               );
             })}
           </tbody>
